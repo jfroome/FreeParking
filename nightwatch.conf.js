@@ -21,8 +21,7 @@ module.exports = {
     port: 4444,
     server_path: require('geckodriver').path,
     cli_args: [
-      // very verbose geckodriver logs
-      // '-vv'
+      '-vv'
     ]
   },
 
