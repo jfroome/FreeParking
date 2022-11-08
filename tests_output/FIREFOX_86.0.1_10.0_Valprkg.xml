@@ -5,9 +5,9 @@
 
   <testsuite name="Valprkg"
     errors="0" failures="0" hostname="" id="" package="Valprkg" skipped="0"
-    tests="1" time="5.025" timestamp="">
+    tests="1" time="5.496" timestamp="">
   
-    <testcase name="Submit parking form" classname="Valprkg" time="5.025" assertions="7">
+    <testcase name="Submit parking form" classname="Valprkg" time="5.496" assertions="7">
 
     
 
