@@ -1,5 +1,6 @@
 describe('valprkg', function () {
   it('Submit parking form', function (browser) {
+    const mailer = require('../modules/mailer.js');
     require('dotenv').config()
     browser
       .navigateTo('http://www.valprkg.com/')
@@ -19,6 +20,11 @@ describe('valprkg', function () {
       .assert.visible('span[class="auto-style2"]');
     browser.getText('span[class="auto-style2"]', (result) => {
       console.log(result.value)
+      mailer.sendEmail(
+        `<b>Parking registration was succcessful. Registration No: ${result.value}</b>`,
+        `<b>Parking registration was succcessful. Registration No: ${result.value}</b>`,
+        process.env.TARGET_EMAIL,
+        process.env.POSTMARK_APIKEY);
     })
   });
 });[]
