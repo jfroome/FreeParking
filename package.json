@@ -275,7 +275,7 @@
   },
   "scripts": {
     "test": "nightwatch tests/",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm test"
   },
   "repository": {
     "type": "git",
