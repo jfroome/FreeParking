@@ -18,8 +18,8 @@ module.exports = {
   "webdriver": {
     // Path to chromedriver which got installed via the buildpack.
     "start_process": true,
-    "server_path": "/app/.chromedriver/bin/chromedriver",
-    "cli_args": [
+    "server_path": "./node_modules/.bin/chromedriver",
+    "cli_args": [ 
       "--verbose"
     ],
     "port": 9090
