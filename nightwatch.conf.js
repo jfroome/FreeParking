@@ -17,6 +17,7 @@ module.exports = {
   src_folders: "tests",
   "webdriver": {
     // Path to chromedriver which got installed via the buildpack.
+    "start_process": true,
     "server_path": "/app/.chromedriver/bin/chromedriver",
     "cli_args": [
       "--verbose"
