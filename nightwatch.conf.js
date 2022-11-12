@@ -15,23 +15,20 @@ module.exports = {
   // An array of folders (excluding subfolders) where your tests are located;
   // if this is not specified, the test source must be passed as the second argument to the test runner.
   src_folders: "tests",
-  "webdriver": {
-    // Path to chromedriver which got installed via the buildpack.
-    "start_process": true,
-    "server_path": "/app/.chromedriver/bin/chromedriver",
-    "cli_args": [
-      "--verbose"
-    ],
-    "port": 9090
+  webdriver: {
+    start_process: true,
+    port: 4444,
+    server_path: require('geckodriver').path,
+    cli_args: [
+      '-vv'
+    ]
   },
 
-  "test_settings": {
-    "default": {
-      "desiredCapabilities": {
-        "browserName": "chrome",
-        // Path to the chrome binary which got installed via the buildpack. 
-        // This environment variable is set automatically by the buildpack itself.
-        "binary": process.env.GOOGLE_CHROME_SHIM
+  test_settings: {
+    default: {
+      launch_url: 'https://nightwatchjs.org',
+      desiredCapabilities : {
+        browserName : 'firefox'
       }
     }
   }
